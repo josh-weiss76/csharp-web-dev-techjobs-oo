@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TechJobsOO
 {
@@ -8,10 +9,8 @@ namespace TechJobsOO
         {
             
             Job job1 = new Job("Product tester", "ACME", "Desert", "Quality control", "Persistence");
-            Console.WriteLine(job1);
-
-            /*Job job2 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
-            Job job3 = new Job("Ice cream tester", new Employer(""), new Location("Home"), new PositionType("UX"), new CoreCompetency("Tasting ability"));
+            Job job2 = new Job("Web Developer", "LaunchCode", "St. Louis", "Front-end developer", "JavaScript");
+            Job job3 = new Job("Ice cream tester", "", "Home", "UX", "Tasting ability");
 
             List<Job> jobs = new List<Job>();
 
@@ -23,13 +22,6 @@ namespace TechJobsOO
             {
                 Console.WriteLine(job);
             }
-            */
-            Job newJob = new Job();
-            Job otherJob = new Job();
-            Console.WriteLine(newJob.Id);
-            Console.WriteLine(otherJob.Id);
-            Employer newEmployer = new Employer("Acme");
-            Console.WriteLine(newEmployer.Value);
         }
     }
 }
