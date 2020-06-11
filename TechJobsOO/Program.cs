@@ -22,6 +22,12 @@ namespace TechJobsOO
                 Console.WriteLine(job);
             }
             */
+            Job newJob = new Job();
+            Job otherJob = new Job();
+            Console.WriteLine(newJob.Id);
+            Console.WriteLine(otherJob.Id);
+            Employer newEmployer = new Employer("Acme");
+            Console.WriteLine(newEmployer.Value);
         }
     }
 }
