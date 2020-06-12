@@ -18,6 +18,10 @@ namespace TechJobsOO
             Id = nextId;
             nextId++;
         }
+        public Job(string name) : this()
+        {
+            Name = name;
+        }
 
         public Job(string name, string employerName, string employerLocation, string jobType, string jobCoreCompetency) : this()
         {
@@ -40,6 +44,11 @@ namespace TechJobsOO
         }
         public override string ToString()
         {
+            if (Id != 0 && Name == null && EmployerName == null && EmployerLocation == null && JobType == null && JobCoreCompetency == null)
+            {
+                string jobDoesNotExist = "OOPS! This job does not seem to exist.";
+                return jobDoesNotExist;
+            }
             if (Name == null)
             {
                 Name = "Data not available";
